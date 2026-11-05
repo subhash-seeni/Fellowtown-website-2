@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-limestone: #F6F3EC;
+  --bg-charcoal: #1E2426;
+  --accent-terracotta: #8C3B1A;
+  --accent-ochre: #DCA358;
+  --accent-slate: #6C8793;
+  --accent-pine: #4E6E58;
+  --border-hairline: rgba(30, 36, 38, 0.14);
+  --border-hairline-dark: rgba(30, 36, 38, 0.22);
+  --border-hairline-light: rgba(246, 243, 236, 0.18);
+  --sand-muted: #D9D4C7;
+  --sand-light: #EFECE4;
+}
+
+/* Base Body & Reset */
+html, body {
+  background-color: var(--bg-limestone);
+  color: var(--bg-charcoal);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Fluid Typography Utilities */
+.fluid-hero-headline {
+  font-size: clamp(2.25rem, 8vw, 5.5rem);
+  line-height: 0.96;
+}
+
+.fluid-section-heading {
+  font-size: clamp(1.75rem, 5.5vw, 3.75rem);
+  line-height: 1.02;
+}
+
+.fluid-subline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.35;
+}
+
+/* Smooth Scrolling with Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Architectural Hairline Utilities */
+.hairline-border {
+  border: 1px solid var(--border-hairline);
+}
+
+.hairline-b {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--border-hairline);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--border-hairline);
+}
+
+/* Technical Monospace Micro-labels */
+.mono-label {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.725rem;
+}
+
+/* Modernist Crosshair Accent for Grid Intersections */
+.architectural-crosshair {
+  position: relative;
+}
+.architectural-crosshair::before {
+  content: "+";
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(30, 36, 38, 0.4);
+  line-height: 1;
+}
+
+/* Sun-cast Deep Architectural Shadows */
+.shadow-sun-cast {
+  box-shadow: 8px 12px 28px -4px rgba(30, 36, 38, 0.12), 2px 4px 8px -2px rgba(30, 36, 38, 0.08);
+}
+
+.shadow-sun-cast-lg {
+  box-shadow: 16px 24px 44px -8px rgba(30, 36, 38, 0.16), 4px 6px 14px -3px rgba(30, 36, 38, 0.09);
+}
+
+/* Tactile Button Flip Transition */
+.btn-tactile-flip {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--accent-terracotta);
+  color: var(--bg-limestone);
+  transition: background-color 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s ease;
+}
+
+.btn-tactile-flip:hover {
+  background-color: var(--bg-charcoal);
+  color: var(--bg-limestone);
+}
+
+.btn-tactile-flip:active {
+  transform: translateY(1px);
+}
+
+/* Raw Plaster Noise Overlay */
+.plaster-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+}
