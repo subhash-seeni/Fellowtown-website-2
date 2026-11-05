@@ -31,8 +31,8 @@ html, body {
 
 /* Fluid Typography Utilities */
 .fluid-hero-headline {
-  font-size: clamp(2.25rem, 8vw, 5.5rem);
-  line-height: 0.96;
+  font-size: clamp(1.85rem, 3.2vw, 3.25rem);
+  line-height: 1.08;
 }
 
 .fluid-section-heading {
